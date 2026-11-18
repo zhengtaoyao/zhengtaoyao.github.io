@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Zhengtao Yao</title>
+<meta name="description" content="Zhengtao Yao: Senior Applied Scientist working on robotics foundation models at General Motors. Research in robot learning, vision-language models and trustworthy AI.">
+<link rel="icon" href="me.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a single quiet column on a faint drafting grid. */
+:root{
+  --paper:#f5f7f8; --sheet:#ffffff; --ink:#18222b; --muted:#56636e; --line:#d5dde2; --grid:rgba(30,80,120,.05);
+  --accent:#1f5f8b; --accent-soft:#e3eef5; --mark:#b8541c;
+  --display:"Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
+  --body:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --mono:"JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){:root{
+  --paper:#0f151a; --sheet:#151d24; --ink:#e3e9ee; --muted:#97a5b1; --line:#2a3640; --grid:rgba(120,180,220,.045);
+  --accent:#7db7de; --accent-soft:#1b2b38; --mark:#e08a55; color-scheme:dark}}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background-color:var(--paper);
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+  background-size:24px 24px;
+  color:var(--ink); font-family:var(--body); font-size:17px; line-height:1.6;
+}
+a{color:var(--accent); text-decoration-thickness:1px; text-underline-offset:3px}
+a:focus-visible{outline:2px solid var(--accent); outline-offset:2px}
+.wrap{max-width:820px; margin:0 auto; padding-block:48px 64px;
+  padding-left:max(20px, env(safe-area-inset-left,0px)); padding-right:max(20px, env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display); text-wrap:balance; margin:0; line-height:1.2}
+.label{font-family:var(--mono); font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted)}
+
+.hero{display:grid; grid-template-columns:auto 1fr; gap:28px; align-items:start}
+.portrait{width:132px; margin:0; border:1px solid var(--line); background:var(--sheet); padding:5px}
+.portrait img{display:block; width:100%; height:auto}
+.hero h1{font-size:clamp(36px,6vw,52px); font-weight:700; letter-spacing:-.02em}
+.role{font-family:var(--display); font-weight:500; font-size:19px; color:var(--accent); margin:6px 0 14px}
+.hero p{margin:0 0 12px; max-width:62ch}
+.links{display:flex; flex-wrap:wrap; gap:8px 18px; font-family:var(--mono); font-size:13.5px; margin-top:14px}
+.links span{color:var(--muted)}
+
+section{margin-top:56px}
+.sh{border-bottom:1.5px solid var(--ink); padding-bottom:6px; margin-bottom:18px}
+.sh h2{font-size:24px}
+
+.interests{display:flex; flex-wrap:wrap; gap:8px}
+.interests span{font-family:var(--mono); font-size:12.5px; border:1px solid var(--line); background:var(--sheet); padding:4px 10px}
+
+.pubs{list-style:none; margin:0; padding:0}
+.pub{display:grid; grid-template-columns:118px 1fr; gap:18px; padding:14px 0; border-top:1px solid var(--line)}
+.pub:first-child{border-top:0; padding-top:0}
+.venue{font-family:var(--mono); font-size:12.5px; font-weight:500; color:var(--ink); line-height:1.5}
+.t{font-weight:600}
+.a{font-size:14.5px; color:var(--muted)}
+.a strong{color:var(--ink); font-weight:600}
+.d{font-size:15.5px; margin-top:4px}
+.tag{display:inline-block; font-family:var(--mono); font-size:10.5px; letter-spacing:.06em; text-transform:uppercase; padding:1px 6px; margin-left:6px; vertical-align:2px}
+.tag.first{color:var(--accent); background:var(--accent-soft)}
+.tag.corr{color:var(--mark); border:1px solid currentColor}
+.pub .x{font-family:var(--mono); font-size:12.5px; margin-top:4px}
+.more{font-size:15px; margin-top:14px}
+
+.job{display:grid; grid-template-columns:118px 1fr; gap:18px; padding:14px 0; border-top:1px solid var(--line)}
+.sh + .job{border-top:0; padding-top:0}
+.when{font-family:var(--mono); font-size:12.5px; color:var(--muted)}
+.job h3{font-size:18px}
+.job .org{color:var(--accent); font-family:var(--display); font-weight:500; font-size:15.5px}
+.job p{margin:6px 0 0; font-size:15.5px}
+
+footer{margin-top:64px; font-family:var(--mono); font-size:11.5px; color:var(--muted); border-top:1px solid var(--line); padding-top:14px}
+
+@media (max-width:600px){
+  body{font-size:16px}
+  .hero{grid-template-columns:1fr; gap:18px}
+  .portrait{width:104px}
+  .pub,.job{grid-template-columns:1fr; gap:2px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <figure class="portrait"><img src="me.jpg" alt="Portrait of Zhengtao Yao" width="122" height="177"></figure>
+    <div>
+      <h1>Zhengtao Yao</h1>
+      <div class="role">Senior Applied Scientist, Robotics Foundation Models · General Motors</div>
+      <p>I work on robot learning: manipulation policies that learn from scalable data such as human video and still hold up on a real production line. At GM I bring vision-language-action and world-action models into automotive assembly.</p>
+      <p>My research also covers reliable vision-language models, LLM agents and physical reasoning. I received my PhD from the University of Southern California.</p>
+      <div class="links">
+        <a href="https://scholar.google.com/citations?user=OfPcaskAAAAJ&amp;hl=en">Google Scholar</a>
+        <a href="https://github.com/zhengtaoyao">GitHub</a>
+        <span>chhwss698 [at] gmail.com</span>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <div class="sh"><h2>Research interests</h2></div>
+    <div class="interests">
+      <span>Robot manipulation</span><span>Vision-language-action models</span><span>World models</span>
+      <span>Physical reasoning</span><span>Vision-language models</span><span>LLM agents and memory</span><span>Trustworthy AI</span>
+    </div>
+  </section>
+
+  <section>
+    <div class="sh"><h2>Experience</h2></div>
+    <div class="job">
+      <div class="when">2025 – now</div>
+      <div>
+        <h3>Senior Applied Scientist</h3>
+        <div class="org">General Motors · Robotics Foundation Models</div>
+        <p>Building dual-arm manipulation systems for the factory: end-to-end VLA and world-action policies for removing parts from bags, unwrapping boxes and handling wire harnesses, plus a low-cost teleoperation setup for collecting robot data. Also built the perception stack for kitting and leads an in-plant rollout with a vendor. Work has led to two patents.</p>
+      </div>
+    </div>
+    <div class="job">
+      <div class="when">2021 – 2025</div>
+      <div>
+        <h3>PhD Researcher</h3>
+        <div class="org">University of Southern California</div>
+        <p>Physics-informed machine learning and uncertainty quantification for multiscale composite materials. Also earned MS degrees in Computer Science, Statistics and Electrical Engineering.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sh"><h2>Selected publications</h2></div>
+    <ul class="pubs">
+      <li class="pub"><div class="venue">NeurIPS 2026</div><div>
+        <div class="t">PhysGraphNet: Physical-State Scene Graphs via Latent Graph Reasoning and Counterfactual Supervision<span class="tag first">First author</span></div>
+        <div class="a"><strong>Zhengtao Yao</strong>, Runhao Li, Yan Wen, Guang Yang, Siheng Wang, Chenhao Wei, Rongchao Zhang, Guoqing Ma, Haoyan Xu, Junhao Dong</div>
+        <div class="d">Predicts what state objects are in, such as occluded, open or blocked, from one image and a language goal, so a robot knows what it can act on.</div>
+      </div></li>
+      <li class="pub"><div class="venue">WACV 2027</div><div>
+        <div class="t">GeoSelect: Training-Free, Label-Free Layer Selection for Frozen Vision Foundation Models via Patch-Token Geometry<span class="tag corr">Corresponding</span></div>
+        <div class="a">Yan Wen, Siheng Wang, Ruihai Wu, Guang Yang, Jingyu Sun, Junhao Dong, Hongbo Zhang, Runhao Li, Chenhao Wei, <strong>Zhengtao Yao</strong></div>
+        <div class="d">Picks the most useful layer of a frozen vision backbone from the geometry of its features, without labels or training.</div>
+      </div></li>
+      <li class="pub"><div class="venue">NeurIPS 2026</div><div>
+        <div class="t">RECAP: Looking Once Is Not Enough for Vision-Language Reasoning</div>
+        <div class="a">Zhaolu Kang, Tailong Luo, Chenxin Li, Zhenyu Yu, Fengyu Zhou, Jiachen Qian, Lei Wei, Shuang Chen, Jiachen Li, Yingjie He, Eric Hanchen Jiang, Rongchao Zhang, <strong>Zhengtao Yao</strong>, Hoi Leong Lee, Guansu Wang, Kaiyue Zhou</div>
+        <div class="d">Rewards vision-language models for looking back at the image during long reasoning chains.</div>
+        <div class="x"><a href="https://arxiv.org/abs/2610.30834">arXiv</a></div>
+      </div></li>
+      <li class="pub"><div class="venue">NeurIPS 2026</div><div>
+        <div class="t">Even Sailors Need Calm Seas: Taming the Geometry of VLMs for Fast Adversarial Fine-Tuning</div>
+        <div class="a">Yuqing Wen, Junhao Dong, Ting Peng, Xudong Zhang, Jiaming Zhang, Weiming Liu, <strong>Zhengtao Yao</strong>, Xinghua Qu, Yew-Soon Ong</div>
+        <div class="d">Makes fast, single-step adversarial fine-tuning of vision-language models stable and robust.</div>
+      </div></li>
+      <li class="pub"><div class="venue">NeurIPS 2026</div><div>
+        <div class="t">TrajWiki: Source-Grounded Memory Trajectories for Long-Horizon Dialogue Agents</div>
+        <div class="a">Jingyu Sun, Yuyang Xue, Mingyang Li, <strong>Zhengtao Yao</strong>, Jiachen Li, Yang Cui, Wenhao Cai, Haozhe Liu, Fangying Wang, Magdalene Katharina Montgomery, Syed Murtuza Baker, Hongpeng Zhou</div>
+        <div class="d">An auditable, wiki-style memory that lets dialogue agents track how what they know changes over time.</div>
+        <div class="x"><a href="https://arxiv.org/abs/2608.00967">arXiv</a></div>
+      </div></li>
+      <li class="pub"><div class="venue">CVPR 2026</div><div>
+        <div class="t">CME-CAD: Heterogeneous Collaborative Multi-Expert Reinforcement Learning for CAD Code Generation</div>
+        <div class="a">Ke Niu, Haiyang Yu, Zhuofan Chen, <strong>Zhengtao Yao</strong>, Weitao Jia, Xiaodong Ge, Jingqun Tang, Benlei Cui, Bin Li, Xiangyang Xue</div>
+        <div class="d">Several vision-language experts learn together with reinforcement learning to write executable CAD code.</div>
+        <div class="x"><a href="https://arxiv.org/abs/2512.23333">arXiv</a></div>
+      </div></li>
+      <li class="pub"><div class="venue">ICLR 2026</div><div>
+        <div class="t">DeCo-DETR: Decoupled Cognition DETR for Efficient Open-Vocabulary Object Detection</div>
+        <div class="a">Siheng Wang, Yanshu Li, Bohan Hu, Zhengdao Li, Haibo Zhan, Linshan Li, Weiming Liu, Ruizhi Qian, Guangxin Wu, Hao Zhang, Jifeng Shen, Piotr Koniusz, <strong>Zhengtao Yao</strong>, Junhao Dong, Qiang Sun</div>
+        <div class="d">Open-vocabulary detection without running a text encoder at inference time.</div>
+        <div class="x"><a href="https://arxiv.org/abs/2604.02753">arXiv</a></div>
+      </div></li>
+      <li class="pub"><div class="venue">ICLR 2026</div><div>
+        <div class="t">OrthAlign: Orthogonal Subspace Decomposition for Non-Interfering Multi-Objective Alignment</div>
+        <div class="a">Liang Lin, Zhihao Xu, Junhao Dong, Jian Zhao, Yuchen Yuan, Guibin Zhang, Miao Yu, Yiming Zhang, <strong>Zhengtao Yao</strong>, Huahui Yi, Haichuan Tang, Dongrui Liu, Xinfeng Li, Kun Wang</div>
+        <div class="d">Aligns language models to several goals at once without the goals interfering with each other.</div>
+        <div class="x"><a href="https://arxiv.org/abs/2509.24610">arXiv</a></div>
+      </div></li>
+    </ul>
+    <p class="more">Full list on <a href="https://scholar.google.com/citations?user=OfPcaskAAAAJ&amp;hl=en">Google Scholar</a>.</p>
+  </section>
+
+  <footer>© 2026 Zhengtao Yao · Last updated November 2026</footer>
+</div>
+</body>
+</html>
