@@ -65,6 +65,7 @@ section{margin-top:56px}
 .tag{display:inline-block; font-family:var(--mono); font-size:10.5px; letter-spacing:.06em; text-transform:uppercase; padding:1px 6px; margin-left:6px; vertical-align:2px}
 .tag.first{color:var(--accent); background:var(--accent-soft)}
 .tag.corr{color:var(--mark); border:1px solid currentColor}
+.tag.co{color:var(--muted); border:1px solid var(--line)}
 .pub .x{font-family:var(--mono); font-size:12.5px; margin-top:4px}
 .more{font-size:15px; margin-top:14px}
 
@@ -126,7 +127,7 @@ footer{margin-top:64px; font-family:var(--mono); font-size:11.5px; color:var(--m
       <div>
         <h3>PhD Researcher</h3>
         <div class="org">University of Southern California</div>
-        <p>Advised by <a href="https://viterbi-web.usc.edu/~yzhao010/">Prof. Yue Zhao</a> and <a href="https://scholar.google.com/citations?user=NmK-vOoAAAAJ&amp;hl=en">Prof. Roger Ghanem</a>. Research started with vision-language models, including context-aware attention modulation that helps large VLMs focus on the right evidence during multimodal in-context learning. It then grew into graph learning with LLMs and scientific machine learning: physics-informed neural networks and surrogate models for multiscale composite simulations.</p>
+        <p>Advised by <a href="https://viterbi-web.usc.edu/~yzhao010/">Prof. Yue Zhao</a> and <a href="https://scholar.google.com/citations?user=NmK-vOoAAAAJ&amp;hl=en">Prof. Roger Ghanem</a>. Research started with vision-language models, including context-aware attention modulation that helps large VLMs focus on the right evidence during multimodal in-context learning. Graph learning with LLMs and scientific machine learning: physics-informed neural networks and surrogate models.</p>
       </div>
     </div>
   </section>
@@ -162,57 +163,47 @@ footer{margin-top:64px; font-family:var(--mono); font-size:11.5px; color:var(--m
     <ul class="pubs">
       <li class="pub"><div class="venue">NeurIPS 2026</div><div>
         <div class="t">PhysGraphNet: Physical-State Scene Graphs via Latent Graph Reasoning and Counterfactual Supervision<span class="tag first">First author</span></div>
-        <div class="a"><strong>Zhengtao Yao</strong>, Runhao Li, Yan Wen, Guang Yang, Siheng Wang, Chenhao Wei, Rongchao Zhang, Guoqing Ma, Haoyan Xu, Junhao Dong</div>
         <div class="d">Predicts what state objects are in, such as occluded, open or blocked, from one image and a language goal, so a robot knows what it can act on.</div>
       </div></li>
       <li class="pub"><div class="venue">IJNME 2026</div><div>
         <div class="t">PINNA: Physics-Informed Neural Networks Architecture for Implicit Governing Physics With Interpretability<span class="tag first">First author</span></div>
-        <div class="a"><strong>Zhengtao Yao</strong>, Philippe Hawi, Venkat Aitharaju, Jay Mahishi, Roger Ghanem</div>
         <div class="d">A physics-informed network that learns governing physics that is only implicitly known, while keeping the learned model interpretable.</div>
         <div class="x"><a href="https://doi.org/10.1002/nme.70399">Paper</a></div>
       </div></li>
       <li class="pub"><div class="venue">KDD 2027</div><div>
         <div class="t">NG-LoRA: Closed-Form Natural-Gradient Low-Rank Adaptation for Large Language Models<span class="tag corr">Corresponding</span></div>
-        <div class="a">Yan Wen, Zhaolu Kang, Siheng Wang, Shenghao Fu, Guang Yang, Chenhao Wei, Lingyu Jiang, <strong>Zhengtao Yao</strong></div>
         <div class="d">Initializes LoRA adapters in closed form from a natural-gradient objective, so fine-tuning starts from a much better point at no extra training cost.</div>
       </div></li>
       <li class="pub"><div class="venue">WACV 2027</div><div>
         <div class="t">GeoSelect: Training-Free, Label-Free Layer Selection for Frozen Vision Foundation Models via Patch-Token Geometry<span class="tag corr">Corresponding</span></div>
-        <div class="a">Yan Wen, Siheng Wang, Ruihai Wu, Guang Yang, Jingyu Sun, Junhao Dong, Hongbo Zhang, Runhao Li, Chenhao Wei, <strong>Zhengtao Yao</strong></div>
         <div class="d">Picks the most useful layer of a frozen vision backbone from the geometry of its features, without labels or training.</div>
       </div></li>
       <li class="pub"><div class="venue">NeurIPS 2026</div><div>
-        <div class="t">RECAP: Looking Once Is Not Enough for Vision-Language Reasoning</div>
-        <div class="a">Zhaolu Kang, Tailong Luo, Chenxin Li, Zhenyu Yu, Fengyu Zhou, Jiachen Qian, Lei Wei, Shuang Chen, Jiachen Li, Yingjie He, Eric Hanchen Jiang, Rongchao Zhang, <strong>Zhengtao Yao</strong>, Hoi Leong Lee, Guansu Wang, Kaiyue Zhou</div>
+        <div class="t">RECAP: Looking Once Is Not Enough for Vision-Language Reasoning<span class="tag co">Coauthor</span></div>
         <div class="d">Rewards vision-language models for looking back at the image during long reasoning chains.</div>
         <div class="x"><a href="https://arxiv.org/abs/2610.30834">arXiv</a></div>
       </div></li>
       <li class="pub"><div class="venue">NeurIPS 2026</div><div>
-        <div class="t">Even Sailors Need Calm Seas: Taming the Geometry of VLMs for Fast Adversarial Fine-Tuning</div>
-        <div class="a">Yuqing Wen, Junhao Dong, Ting Peng, Xudong Zhang, Jiaming Zhang, Weiming Liu, <strong>Zhengtao Yao</strong>, Xinghua Qu, Yew-Soon Ong</div>
+        <div class="t">Even Sailors Need Calm Seas: Taming the Geometry of VLMs for Fast Adversarial Fine-Tuning<span class="tag co">Coauthor</span></div>
         <div class="d">Makes fast, single-step adversarial fine-tuning of vision-language models stable and robust.</div>
       </div></li>
       <li class="pub"><div class="venue">NeurIPS 2026</div><div>
-        <div class="t">TrajWiki: Source-Grounded Memory Trajectories for Long-Horizon Dialogue Agents</div>
-        <div class="a">Jingyu Sun, Yuyang Xue, Mingyang Li, <strong>Zhengtao Yao</strong>, Jiachen Li, Yang Cui, Wenhao Cai, Haozhe Liu, Fangying Wang, Magdalene Katharina Montgomery, Syed Murtuza Baker, Hongpeng Zhou</div>
+        <div class="t">TrajWiki: Source-Grounded Memory Trajectories for Long-Horizon Dialogue Agents<span class="tag co">Coauthor</span></div>
         <div class="d">An auditable, wiki-style memory that lets dialogue agents track how what they know changes over time.</div>
         <div class="x"><a href="https://arxiv.org/abs/2608.00967">arXiv</a></div>
       </div></li>
       <li class="pub"><div class="venue">CVPR 2026</div><div>
-        <div class="t">CME-CAD: Heterogeneous Collaborative Multi-Expert Reinforcement Learning for CAD Code Generation</div>
-        <div class="a">Ke Niu, Haiyang Yu, Zhuofan Chen, <strong>Zhengtao Yao</strong>, Weitao Jia, Xiaodong Ge, Jingqun Tang, Benlei Cui, Bin Li, Xiangyang Xue</div>
+        <div class="t">CME-CAD: Heterogeneous Collaborative Multi-Expert Reinforcement Learning for CAD Code Generation<span class="tag co">Coauthor</span></div>
         <div class="d">Several vision-language experts learn together with reinforcement learning to write executable CAD code.</div>
         <div class="x"><a href="https://arxiv.org/abs/2512.23333">arXiv</a></div>
       </div></li>
       <li class="pub"><div class="venue">ICLR 2026</div><div>
-        <div class="t">DeCo-DETR: Decoupled Cognition DETR for Efficient Open-Vocabulary Object Detection</div>
-        <div class="a">Siheng Wang, Yanshu Li, Bohan Hu, Zhengdao Li, Haibo Zhan, Linshan Li, Weiming Liu, Ruizhi Qian, Guangxin Wu, Hao Zhang, Jifeng Shen, Piotr Koniusz, <strong>Zhengtao Yao</strong>, Junhao Dong, Qiang Sun</div>
+        <div class="t">DeCo-DETR: Decoupled Cognition DETR for Efficient Open-Vocabulary Object Detection<span class="tag co">Coauthor</span></div>
         <div class="d">Open-vocabulary detection without running a text encoder at inference time.</div>
         <div class="x"><a href="https://arxiv.org/abs/2604.02753">arXiv</a></div>
       </div></li>
       <li class="pub"><div class="venue">ICLR 2026</div><div>
-        <div class="t">OrthAlign: Orthogonal Subspace Decomposition for Non-Interfering Multi-Objective Alignment</div>
-        <div class="a">Liang Lin, Zhihao Xu, Junhao Dong, Jian Zhao, Yuchen Yuan, Guibin Zhang, Miao Yu, Yiming Zhang, <strong>Zhengtao Yao</strong>, Huahui Yi, Haichuan Tang, Dongrui Liu, Xinfeng Li, Kun Wang</div>
+        <div class="t">OrthAlign: Orthogonal Subspace Decomposition for Non-Interfering Multi-Objective Alignment<span class="tag co">Coauthor</span></div>
         <div class="d">Aligns language models to several goals at once without the goals interfering with each other.</div>
         <div class="x"><a href="https://arxiv.org/abs/2509.24610">arXiv</a></div>
       </div></li>
